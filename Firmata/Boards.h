@@ -3,7 +3,13 @@
 #ifndef Firmata_Boards_h
 #define Firmata_Boards_h
 
-#include <WProgram.h>	// for digitalRead, digitalWrite, etc
+#include <inttypes.h>
+
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"	// for digitalRead, digitalWrite, etc
+#else
+#include "WProgram.h"
+#endif
 
 // Normally Servo.h must be included before Firmata.h (which then includes
 // this file).  If Servo.h wasn't included, this allows the code to still

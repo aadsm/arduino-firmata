@@ -13,9 +13,8 @@
 #ifndef Firmata_h
 #define Firmata_h
 
-#include <WProgram.h>
-#include <inttypes.h>
-
+/* Hardware Abstraction Layer */
+#include "Boards.h"
 
 /* Version numbers for the protocol.  The protocol is still changing, so these
  * version numbers are important.  This number can be queried so that host
@@ -154,9 +153,6 @@ extern FirmataClass Firmata;
  * firmware source file rather than the library source file.
  */
 #define setFirmwareVersion(x, y)   setFirmwareNameAndVersion(__FILE__, x, y)
-
-/* Hardware Abstraction Layer */
-#include "Boards.h"
 
 #endif /* Firmata_h */
 
